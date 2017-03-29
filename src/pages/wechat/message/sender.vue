@@ -7,8 +7,11 @@
         <el-col :span='16'>
             <el-input v-model="msg" placeholder="请输入聊天信息" @keyup.enter.native="send"></el-input>
         </el-col>
-        <el-col :span='4'>
+        <el-col :span='2'>
             <el-button class='btn-send' @click='send'>发送</el-button>
+        </el-col>
+        <el-col :span='2'>
+            <el-button v-if='userInfo.isLogin' class='btn-send' @click='clear'>清空</el-button>
         </el-col>
         <!-- </el-row> -->
         <!-- <el-row v-else>
@@ -18,7 +21,7 @@
 </template>
 
 <script>
-    import {send} from 'services/msg.service'
+    import {send, clear} from 'services/msg.service'
 
     export default {
         data: () => ({
@@ -42,6 +45,11 @@
                     this.msg = null
                 }).catch(e => {
                     this.$message('发送失败，应该是人品问题！')
+                })
+            },
+            clear () {
+                clear().catch(() => {
+                    this.$message('清空失败！')
                 })
             }
         }

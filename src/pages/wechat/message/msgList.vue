@@ -27,6 +27,9 @@
                 }
             })
         },
+        beforeDestroy () {
+            msgService.stopListen();
+        },
         components: {MsgItem}
     }
 </script>

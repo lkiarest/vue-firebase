@@ -2,11 +2,11 @@
  * 信息相关 service
  */
 
-// msg 数据库记录引用
+// msg ref
 const msgRef = firebase.database().ref('msg')
 
 /**
- * 发送信息
+ * send msg
  */
 export const send = (content, user) => {
     let time = firebase.database.ServerValue.TIMESTAMP
@@ -14,14 +14,21 @@ export const send = (content, user) => {
 }
 
 /**
- * 删除信息
+ * remove one message by uuid
  */
 export const remove = (uuid) => {
     return msgRef.update({[uuid]: null})
 }
 
 /**
- * 监听数据变化
+ * clear all messages
+ */
+export const clear = () => {
+    return msgRef.remove()
+}
+
+/**
+ * listen to message list change
  */
 export const listen = (callbacks) => {
     if (!callbacks) {
@@ -36,7 +43,7 @@ export const listen = (callbacks) => {
 }
 
 /**
- * 停止监听
+ * stop listening
  */
 export const stopListen = () => {
     msgRef.off()

@@ -3,7 +3,7 @@
  */
 
 export const uiconf = {
-    signInSuccessUrl: '/wechat/index.html#/login',
+    signInSuccessUrl: '/vue-firebase',
     signInOptions: [
         // Leave the lines as is for the providers you want to offer your users.
         // firebase.auth.GoogleAuthProvider.PROVIDER_ID,
@@ -13,7 +13,8 @@ export const uiconf = {
         {
             provider: firebase.auth.EmailAuthProvider.PROVIDER_ID
         }
-    ]
+    ],
+    credentialHelper: firebaseui.auth.CredentialHelper.NONE
     // Terms of service url.
     // tosUrl: '<your-tos-url>'
 }
