@@ -14,4 +14,4 @@ npm run dev #开发模式
 npm run build #发布模式
 ```
 
-此项目基于[vue-elementui](https://github.com/lkiarest/webpack/tree/element) 启动模板创建
+此项目基于[vue-elementui](https://github.com/lkiarest/element-ui-startkit) 启动模板创建
