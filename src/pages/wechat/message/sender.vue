@@ -32,9 +32,17 @@
         },
         methods: {
             send () {
+                if (!this.msg || !this.msg.trim()) {
+                    this.$message('消息加空判断了')
+                    return
+                }
+
                 let uname = this.$store.state.userInfo.name || this.username || '超级懒'
-                send(this.msg, uname)
-                this.msg = null
+                send(this.msg, uname).then(() => {
+                    this.msg = null
+                }).catch(e => {
+                    this.$message('发送失败，应该是人品问题！')
+                })
             }
         }
     }
