@@ -28,13 +28,13 @@
 
 <style scoped lang="less">
     .msg-item {
-        margin: 0.4rem 0;
+        margin: 1rem 0;
         overflow: hidden;
 
         .user {
             width: 100px;
             color: #666;
-            line-height: 1.5rem;
+            line-height: 1.8rem;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
@@ -42,7 +42,7 @@
 
         .content {
             overflow: hidden;
-            line-height: 1.5rem;
+            line-height: 1.8rem;
             margin-left: 0.4rem;
         }
     }

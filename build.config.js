@@ -12,13 +12,13 @@ const _jsUrl = (base) => {
     return base + (MIN_JS ? '.min.js' : '.js')
 }
 
-const FE_BOWER_BASE = 'http://res.wisedu.com/bower_components'
+// const FE_BOWER_BASE = 'http://res.wisedu.com/bower_components'
 const BOOTCSS_BASE = 'https://cdn.bootcss.com'
 const VENDOR_BASE = 'statics/vendor'
 
 module.exports = {
     proxy: { // DEV 模式下访问后端 api 时防止跨域使用的代理
-        '/wec-portal-nk': 'http://172.16.7.75:8000'
+        // '/wec-portal-nk': 'http://172.16.7.75:8000'
     },
     alias: { // 自定义webpack依赖的别名，默认已支持 src/pages/config/node_modules
         'components': 'src/components', // 公共组件
@@ -45,11 +45,12 @@ module.exports = {
         // _jsUrl(`${FE_BOWER_BASE}/vue2/vuex`),
         // _jsUrl(`${FE_BOWER_BASE}/vue2/axios`),
         // `${FE_BOWER_BASE}/iscroll/iscroll.js`,
-        `${BOOTCSS_BASE}/vue/2.2.4/vue.min.js`,
-        `${BOOTCSS_BASE}/vue-router/2.2.1/vue-router.min.js`,
-        `${BOOTCSS_BASE}/vue-i18n/5.0.3/vue-i18n.min.js`,
-        `${BOOTCSS_BASE}/vuex/2.2.1/vuex.min.js`,
-        `${BOOTCSS_BASE}/axios/0.15.3/axios.min.js`,
+        _jsUrl(`${BOOTCSS_BASE}/bluebird/3.5.0/bluebird`),
+        _jsUrl(`${BOOTCSS_BASE}/vue/2.2.4/vue`),
+        _jsUrl(`${BOOTCSS_BASE}/vue-router/2.2.1/vue-router`),
+        _jsUrl(`${BOOTCSS_BASE}/vue-i18n/5.0.3/vue-i18n`),
+        _jsUrl(`${BOOTCSS_BASE}/vuex/2.2.1/vuex`),
+        _jsUrl(`${BOOTCSS_BASE}/axios/0.15.3/axios`),
         `${VENDOR_BASE}/firebase/firebase.js`,
         `${VENDOR_BASE}/firebase/firebaseui.js`,
         `${VENDOR_BASE}/element/index.js`
