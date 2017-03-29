@@ -1,6 +1,6 @@
 <template>
     <div class='msg-item'>
-        <div class='user pull-left' :title='item.user'>{{item.user}}：</div>
+        <div class='user pull-left' :title='item.user'>{{item.user}}</div>
         <div class='content'>{{item.content}}</div>
         <!-- <el-button @click='del(item.uuid)'>删除</el-button> -->
     </div>
@@ -43,6 +43,7 @@
         .content {
             overflow: hidden;
             line-height: 1.5rem;
+            margin-left: 0.4rem;
         }
     }
 </style>

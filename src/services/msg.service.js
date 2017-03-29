@@ -10,7 +10,7 @@ const msgRef = firebase.database().ref('msg')
  */
 export const send = (content, user) => {
     let time = firebase.database.ServerValue.TIMESTAMP
-    msgRef.push({content, user, time})
+    return msgRef.push({content, user, time})
 }
 
 /**

@@ -47,7 +47,7 @@ module.exports = {
         // `${FE_BOWER_BASE}/iscroll/iscroll.js`,
         `${BOOTCSS_BASE}/vue/2.2.4/vue.min.js`,
         `${BOOTCSS_BASE}/vue-router/2.2.1/vue-router.min.js`,
-        `${BOOTCSS_BASE}/vue-i18n/5.0.0/vue-i18n.min.js`,
+        `${BOOTCSS_BASE}/vue-i18n/5.0.3/vue-i18n.min.js`,
         `${BOOTCSS_BASE}/vuex/2.2.1/vuex.min.js`,
         `${BOOTCSS_BASE}/axios/0.15.3/axios.min.js`,
         `${VENDOR_BASE}/firebase/firebase.js`,
