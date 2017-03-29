@@ -8,7 +8,7 @@ export default [
     {
         path: '/',
         component: wechat,
-        meta: {title: '首页'}
+        meta: {title: '基于 firebase 和 github-pages 的免费应用'}
     },
     {
         path: '/login',
