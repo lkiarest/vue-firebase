@@ -1,6 +1,6 @@
 <template>
     <div class='msg-item'>
-        <div class='user pull-left'>{{item.user}}：</div>
+        <div class='user pull-left' :title='item.user'>{{item.user}}：</div>
         <div class='content'>{{item.content}}</div>
         <!-- <el-button @click='del(item.uuid)'>删除</el-button> -->
     </div>
@@ -32,8 +32,12 @@
         overflow: hidden;
 
         .user {
+            width: 100px;
             color: #666;
             line-height: 1.5rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
         .content {
