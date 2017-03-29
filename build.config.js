@@ -13,6 +13,7 @@ const _jsUrl = (base) => {
 }
 
 const FE_BOWER_BASE = 'http://res.wisedu.com/bower_components'
+const BOOTCSS_BASE = 'https://cdn.bootcss.com'
 const VENDOR_BASE = 'statics/vendor'
 
 module.exports = {
@@ -37,13 +38,18 @@ module.exports = {
         `${VENDOR_BASE}/firebase/firebaseui.css`
     ],
     jslibs: [ // 在 index.html 中需要引入的 js lib， vue 和 router 必须引入，其余可选
-        _jsUrl(`${FE_BOWER_BASE}/bluebird/bluebird`),
-        _jsUrl(`${FE_BOWER_BASE}/vue2/vue`),
-        _jsUrl(`${FE_BOWER_BASE}/vue2/vue-router`),
-        _jsUrl(`${FE_BOWER_BASE}/vue2/vue-i18n`),
-        _jsUrl(`${FE_BOWER_BASE}/vue2/vuex`),
-        _jsUrl(`${FE_BOWER_BASE}/vue2/axios`),
-        `${FE_BOWER_BASE}/iscroll/iscroll.js`,
+        // _jsUrl(`${FE_BOWER_BASE}/bluebird/bluebird`),
+        // _jsUrl(`${FE_BOWER_BASE}/vue2/vue`),
+        // _jsUrl(`${FE_BOWER_BASE}/vue2/vue-router`),
+        // _jsUrl(`${FE_BOWER_BASE}/vue2/vue-i18n`),
+        // _jsUrl(`${FE_BOWER_BASE}/vue2/vuex`),
+        // _jsUrl(`${FE_BOWER_BASE}/vue2/axios`),
+        // `${FE_BOWER_BASE}/iscroll/iscroll.js`,
+        `${BOOTCSS_BASE}/vue/2.1.10/vue.min.js`,
+        `${BOOTCSS_BASE}/vue-router/2.2.1/vue-router.min.js`,
+        `${BOOTCSS_BASE}/vue-i18n/5.0.0/vue-i18n.min.js`,
+        `${BOOTCSS_BASE}/vuex/2.1.2/vuex.min.js`,
+        `${BOOTCSS_BASE}/axios/0.15.3/axios.min.js`,
         `${VENDOR_BASE}/firebase/firebase.js`,
         `${VENDOR_BASE}/firebase/firebaseui.js`,
         `${VENDOR_BASE}/element/index.js`
